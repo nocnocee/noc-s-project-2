@@ -25,11 +25,12 @@ Contemplate is an online app where daily questions (random subjects and topics) 
     * As a user, I want the ability to scroll up to previous comment
     * As a user, I want the ability to write my own thoughts on the chat box
     * As a user, I want the ability to be able to go back to the old questions and read old chat
-    * As a user, I want the ability to see the dates i've participated on the calenda
+    * As a user, I want the ability to see the dates i've participated on the calendar
 
 # Wireframes / Screenshots
-
+![Alt text](img/Untitled_Copy_1.jpg)
 
 
 
 # Entity Relationship Diagrams (ERDs)
+![Alt text](img/DBMS_ER_diagram_UML_notation_-_DBMS_ER_diagram_UML_notation.jpeg)
