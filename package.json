@@ -1,0 +1,24 @@
+{
+  "name": "noc-s-project-2",
+  "version": "1.0.0",
+  "description": "# Overview Contemplate is an online app where daily questions (random subjects and topics) are posted and changed everyday for people to contemplate and write their thinking process and share with others in a live chat box system.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nocnocee/noc-s-project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nocnocee/noc-s-project-2/issues"
+  },
+  "homepage": "https://github.com/nocnocee/noc-s-project-2#readme",
+  "dependencies": {
+    "mongoose": "^6.9.0"
+  }
+}
