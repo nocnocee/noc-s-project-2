@@ -13,6 +13,15 @@ const router = express.Router()
 //////////////////////////////
 //// Routes               ////
 //////////////////////////////
+
+// GET -> /users/signup
+// Renders a liquid page with the sign up form
+router.get('/signup', (req, res) => {
+    // res.render points to a file
+    // res.redirect points to a url
+    res.render('users/signup')
+})
+
 // POST -> /users/signup
 router.post('/signup', async (req, res) => {
     const newUser = req.body
@@ -33,6 +42,12 @@ router.post('/signup', async (req, res) => {
             console.log(err)
             res.json(err)
         })
+})
+
+// GET -> /users/login
+// Renders a liquid page with the login form
+router.get('/login', (req, res) => {
+    res.render('users/login')
 })
 
 // POST -> /users/login

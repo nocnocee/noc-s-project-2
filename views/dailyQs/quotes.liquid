@@ -1,0 +1,23 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+  <div class="container-sm">
+
+    <h1>{{ quote }}</h1>
+
+    <h3>{{ comment.note }}  </h3>
+
+    <p>{{ comment.note }}</p>
+      <div class="d-flex justify-content-between">
+        <small>comment: {{ commment.author.username }}</small>
+        {% if commment.author == userId %}
+          <form action="/comments/delete/{{ comment.id }}?_method=DELETE" method="POST">
+            <input
+              class="btn btn-danger"
+              type="submit"
+              value="X">
+          </form>
+        {% endif %}
+      </div>
+
+  </div>
+{% endblock %}

@@ -15,13 +15,18 @@ const limit = 10
 //////////////////////////////
 //// Routes               ////
 //////////////////////////////
+
 router.get('/', (req, res) => {
     let random = Math.floor(Math.random() * limit) % limit
-    console.log(random)
     Dailyq.findOne().skip(random)
+    
+    // send json if successful
+    .then(dailyqs => { 
+        
+        console.log(dailyqs)
+        res.render('dailyQs/quotes', (dailyqs))
 
-        // send json if successful
-        .then(dailyqs => { res.json({ dailyqs: dailyqs })})
+     })
         // catch errors if they occur
         .catch(err => {
             console.log(err)

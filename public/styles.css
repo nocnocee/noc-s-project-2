@@ -1,0 +1,19 @@
+body {
+    background-color: lightgrey;
+}
+
+.colorBox {
+    height: 25px;
+    width: 75%;
+    border: .5px solid grey;
+}
+
+.fruitInfo {
+    width: 33%;
+    border: 1px solid grey;
+    border-radius: 25px;
+}
+
+.homepage {
+    text-align: center;
+}
