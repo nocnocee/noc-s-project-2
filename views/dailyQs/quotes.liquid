@@ -28,6 +28,13 @@
 
           </form>
 
+          <form action="/comments/{{ Comment.id }}?_method=PUT" method="POST">
+
+            <input type="text" class="form-control" name="note" value="{{ Comment.note }}">
+            <input class="btn btn-warning" type="submit" value="Edit" onclick="window.location.reload">
+
+          </form>
+
       </div>
 
     {% endfor %}
