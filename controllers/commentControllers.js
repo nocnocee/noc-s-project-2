@@ -38,6 +38,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+    req.body.author = req.session.userId
     const theComment = req.body
     console.log(theComment)
     Comment.create(theComment)

@@ -1,23 +1,37 @@
 {% layout 'layout.liquid' %}
 {% block content %}
+
+
   <div class="container-sm">
+  
+  <h1>{{ dailyqs.quote }}</h1>
 
-    <h1>{{ quote }}</h1>
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    
+    <form action="/comments/" method="POST" target="dummyframe">
 
-    <h3>{{ comment.note }}  </h3>
+        <label class="form-label">Comment:</label>
+        <input type="text" class="form-control" name="note" placeholder="type here" required>
+        <input type="submit" class="btn btn-success mt-3" value="Post" onclick="window.location.reload()">
+        
+    </form>
 
-    <p>{{ comment.note }}</p>
-      <div class="d-flex justify-content-between">
-        <small>comment: {{ commment.author.username }}</small>
-        {% if commment.author == userId %}
-          <form action="/comments/delete/{{ comment.id }}?_method=DELETE" method="POST">
-            <input
-              class="btn btn-danger"
-              type="submit"
-              value="X">
+   
+    {% for Comment in comments %}
+      <div id="comment-{{ Comment.id }}">
+
+          <h5> {{ Comment.note }}</h5>
+
+          <form action="/comments/{{ Comment.id }}?_method=DELETE" method="POST">
+
+            <input class="btn btn-danger" type="submit" value="Delete" onclick="window.location.reload">
+
           </form>
-        {% endif %}
+
       </div>
 
-  </div>
-{% endblock %}
+    {% endfor %}
+    
+    </div>
+    
+  {% endblock %}
